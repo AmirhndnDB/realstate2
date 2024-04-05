@@ -1,15 +1,28 @@
 import React from "react";
-import LINK from "./Component/NavBar/LINK";
+import { useAppSelector } from "./Store/storIndex";
 const Test: React.FC = () => {
+  const person =useAppSelector(state=>state.person.persons) 
   return (
     <div>
-      <LINK activeClassName="bg-white p-6" className="bg-white" to="/one">
-        one
-      </LINK>
-      <LINK activeClassName="bg-white p-12" className="bg-white" to="/tow">
-        tow
-      </LINK>
+<p>this is list component</p>
+<table>
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Name</th>
+    </tr>
+  </thead>
+  <tbody>
+    {person.map(person=>(
+      <tr key={person.id}>
+        <td>{person.id}</td>
+        <td>{person.name}</td>
+      </tr>
+    ))}
+  </tbody>
+</table>
     </div>
   );
 };
+
 export default Test;

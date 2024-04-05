@@ -5,6 +5,8 @@ import Router from "./Component/Router";
 import AvalableFile from "./Component/Pages/AvalableFile";
 import RegesterationFile from "./Component/Pages/RegesterationFile";
 import FilePage from "./Component/Pages/FilePage";
+import Test from "./test";
+import Stortest from "./Stortest"
 
 const App: React.FC = () => {
   return (
@@ -12,6 +14,8 @@ const App: React.FC = () => {
       <Router path="/">
         <NavBar />
         <Main />
+        <Test/>
+        <Stortest/>
       </Router>
       <Router path="/recomend-file">
         <AvalableFile />
@@ -24,6 +28,8 @@ const App: React.FC = () => {
       <Router path="/recomend-file/filePage">
         <FilePage />
       </Router>
+
+      
     </>
   );
 };
