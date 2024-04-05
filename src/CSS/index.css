@@ -1,0 +1,518 @@
+/* 
+Instead 1rem=1em =16px  ==>1px =0.0625
+
+-----01 TYPOGRAFY SYSTEM
+
+- FONT SIZ SYSTEM(px)
+10/12/14/16/18/20/24/30/36/44/52/62/74/86/98
+- FONT SIZ SYSTEM(rem)
+0.625/0.75/0.875/1/1.125/1.25/1.5/1.875/2.25/2.75/3.25/3.875/4.625/5.375/6.125
+
+
+
+- Font weights:
+DEFULT: 300
+ Mediom: 400
+ Semi-bold: 600
+ Bold: 700
+
+- Line height:
+Difult: 1
+Small: 1.05
+midium: 1.2
+Paragraf_difalt: 1.6
+
+-letter-spacing 
+-0.5
+0.75px
+
+
+---02 COLORS
+
+PRIMERY:  green
+- Tins: #
+- shades: # 
+- Accent:greenyellow
+- greys : aliceblue
+
+#56bf8a
+#0cb8a9
+#067b58
+#e0fe9c
+#202020
+---- 05 SHADOWS
+
+box-shadow: 0 3.2rem 6.4rem rgba(0, 0, 0, 0.075);
+
+----06 BORDER RADUS
+(rem)
+Difult:  1 / 1.5 / 2 / 5 ;
+(%) 50%
+
+----07 WITESPACE
+
+- SPACING SYSTEM (px)
+2/4/8/12//16//24/32/48/64/80/96/128
+- SPACING SYSTEM (rem)
+0.125/0.25/0.5/1/1.5/2/3/4/5/6/8
+
+
+
+/* main General */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+#root {
+  display: flex;
+  flex-direction: column;
+}
+/* ***************** */
+/* nav-bar */
+/* **************** */
+body {
+  background-color: #56bf8a;
+}
+
+.nav-bar {
+  position: fixed;
+  background-color: rgba(240, 248, 255, 0.373);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  border-radius: 2rem;
+  margin: 0rem 0.5rem;
+  margin-top: 0.5rem;
+  width: -webkit-fill-available;
+}
+
+.Link {
+  background-color: aliceblue;
+}
+/* .nav-bar:only-child {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.5s;
+} */
+
+/* .nav-bar div :hover {
+  width: 1rem;
+  border-radius: 2rem;
+  padding: 0.5rem;
+  background-color: rgba(215, 224, 231, 0.747);
+  transition: all 0.5s;
+} */
+
+.iconz {
+  color: #0cb8a9;
+}
+
+/* .cliced {
+  width: 1rem;
+  border-radius: 2rem;
+  padding: 0.5rem;
+  background-color: #0cb8a9;
+  color: aliceblue;
+} */
+
+/* *************** */
+/* Hom page */
+/* *************** */
+
+.start-app {
+  background-color: darkgreen;
+  background-image: url(../Store/Imagez/hous2.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-blend-mode: hard-light;
+  height: 20rem;
+}
+.About {
+  background-color: #56bf8a;
+  height: fit-content;
+}
+.User-code {
+  background-color: #0cb8a9;
+  height: 20rem;
+}
+.Reviews {
+  background-color: #067b58;
+  height: fit-content;
+  margin-top: -2rem;
+}
+.Contact {
+  background-color: #202020;
+  height: fit-content;
+}
+
+/* ********* */
+/* first-sec */
+/* ********* */
+
+.start-app {
+  color: aliceblue;
+  padding: 4rem;
+  padding-top: 8rem;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+.date {
+  font-style: italic;
+  font-family: serif;
+  font-weight: 200;
+  margin: 0;
+}
+.Main-title {
+  margin-top: 0;
+  font-family: sans-serif;
+  font-size: 1.875rem;
+}
+.start-box {
+  display: flex;
+  flex-direction: column;
+  font-family: sans-serif;
+  /* justify-content: space-between; */
+  gap: 1.5rem;
+}
+.name-title-box {
+  display: flex;
+  flex-direction: column;
+}
+.Company-name {
+  font-weight: 100;
+  font-size: 1rem;
+  margin: 0;
+}
+.sec-title {
+  margin: 0;
+  font-size: 0.75rem;
+  font-weight: 100;
+}
+.start-btn {
+  border: none;
+  width: fit-content;
+  align-self: center;
+  font-size: 0.625rem;
+  font-weight: 100;
+  padding-inline: 0;
+  padding: 0.625rem 2rem;
+  background-color: #0cb8a9;
+  color: aliceblue;
+}
+
+/* ********* */
+/* About-sec */
+/* ********* */
+
+.About {
+  color: aliceblue;
+  padding: 1rem 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+}
+b {
+  text-decoration: solid;
+  font-weight: 400;
+  color: #067b58;
+}
+.About-title {
+  font-style: italic;
+  font-family: serif;
+  font-size: 2rem;
+  font-weight: 100;
+}
+.About-description {
+  font-size: 0.875rem;
+  font-family: sans-serif;
+  font-weight: 100;
+}
+
+.About-link {
+  font-weight: 300;
+  color: inherit;
+}
+
+.image {
+  width: 17rem;
+  height: 10rem;
+}
+/* ********* */
+/* user-code-sec */
+/* ********* */
+.User-code {
+  color: aliceblue;
+  padding-top: 1rem;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 1rem;
+}
+
+.btn {
+  border: none;
+  width: fit-content;
+  align-self: center;
+  font-size: 0.625rem;
+  font-weight: 100;
+  padding-inline: 0;
+  padding: 0.625rem 2rem;
+  background-color: #56bf8a;
+  color: aliceblue;
+}
+/* .modal-close-box {
+  display: flex;
+  position: absolute;
+  clip-path: inset(0);
+  padding: 10rem;
+  background-color: rgba(128, 128, 128, 0.8);
+}
+.modal-open-box {
+  display: flex;
+
+  position: absolute;
+  clip-path: inset(40px);
+  padding: 10px;
+  background-color: aliceblue;
+} */
+/* ********* */
+/* coment-sec */
+/* ********* */
+.Reviews {
+  color: aliceblue;
+  padding: 1rem 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+}
+.coment-Title {
+  font-style: italic;
+  font-size: 2rem;
+  font-weight: 100;
+}
+.coment-box {
+  border: solid aliceblue 1px;
+  height: 15rem;
+}
+.quot {
+  display: block;
+  height: 10rem;
+  padding: 1.5rem;
+  padding-top: 1rem;
+  padding-bottom: 0;
+  font-size: 0.75rem;
+  font-weight: 100;
+}
+
+.quoter {
+  margin: 0;
+  margin-top: 1rem;
+  padding: 0.5rem;
+  font-size: 0.875rem;
+}
+/* ********* */
+/* footer */
+/* ********* */
+.Contact {
+  color: aliceblue;
+  padding: 1rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 4.5rem;
+}
+
+.company-name {
+  margin: 0;
+  font-family: sans-serif;
+  font-weight: 600;
+  font-size: 0.5rem;
+  align-self: start;
+}
+
+/* .contact-box {
+} */
+
+.title-contact {
+  font-weight: 100;
+  margin: 0;
+  margin-bottom: 1rem;
+}
+
+.company-adreses {
+  color: #999;
+  font-family: sans-serif;
+  font-size: 0.5rem;
+  font-weight: 100;
+  line-height: 0.75rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.adres {
+  margin: 0;
+}
+
+.phone-number {
+  text-decoration: none;
+  color: inherit;
+}
+
+.email-ad {
+  text-decoration: none;
+  color: inherit;
+}
+
+.ofis-hours-title {
+  font-weight: 100;
+  margin-bottom: 1rem;
+}
+
+.description-OHB-box {
+  color: #999;
+  font-family: sans-serif;
+  font-size: 0.5rem;
+  font-weight: 100;
+  line-height: 0.75rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.work-time {
+  margin: 0;
+}
+
+/* .work-time {
+} */
+
+.sotial-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: -webkit-fill-available;
+}
+
+.sotial-title {
+  font-weight: 100;
+  margin-bottom: 1rem;
+  margin: 0;
+  margin-bottom: 1rem;
+  align-self: flex-start;
+}
+.social-links {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+  padding-inline-start: 0;
+}
+.sotial-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.footer-icon {
+  height: 1.2rem;
+  width: 1.2rem;
+  display: inherit;
+  border-radius: 2rem;
+}
+.INS {
+  color: rgb(156, 2, 128);
+  background-color: aliceblue;
+}
+.FB {
+  color: rgb(55, 55, 214);
+  background-color: aliceblue;
+}
+.X {
+  color: rgb(12, 85, 193);
+  background-color: aliceblue;
+}
+.footer-link {
+  border: aliceblue 1px solid;
+  padding: 0.125rem;
+  border-radius: 2rem;
+}
+
+.footer-imge {
+  width: 19rem;
+}
+
+/*AvalableFile*/
+.AvalableFile {
+  background-color: #067b58;
+  margin-top: -8rem;
+  padding-top: 6rem;
+  padding-bottom: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.photo {
+  width: -webkit-fill-available;
+}
+.house-type {
+  font-size: 0.625rem;
+}
+
+.description-icon {
+  font-size: 0.75rem;
+}
+.form-sec {
+  margin-top: -3rem;
+}
+
+.active-btn {
+  border: none;
+  width: fit-content;
+  align-self: center;
+  font-size: 0.625rem;
+  font-weight: 100;
+  padding-inline: 0;
+  padding: 0.625rem 2rem;
+  background-color: #067b58;
+  color: #e0fe9c;
+}
+/**/
+
+.File-page-sec {
+  background-image: url(../Store/Imagez/hose.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 25rem;
+}
+
+.p-file {
+  color: #067b58;
+  background-color: rgba(240, 248, 255, 0.373);
+}
+
+.call-btn {
+  border: none;
+  width: fit-content;
+  align-self: center;
+  font-size: 0.75rem;
+  font-weight: 300;
+  padding-inline: 0;
+  padding: 0.25rem 4rem;
+  background-color: #067b58;
+  color: #e0fe9c;
+}
