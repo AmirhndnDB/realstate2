@@ -1,21 +1,33 @@
-import { ReactNode } from "react";
+import React from "react";
+import { useDataContext } from "../../hooks/useDataContext";
 
-function InputPanel({
-  type,
-  id,
-  children,
-}: {
-  type: string;
+interface InputPanelProps {
+  label: string;
   id: string;
-  children: ReactNode;
-}) {
+  type: string;
+  PL: string;
+}
+
+const InputPanel: React.FC<InputPanelProps> = ({ label, id, type, PL }) => {
+  const { updateDataString } = useDataContext();
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const value = e.target.value;
+    updateDataString(label, value);
+  };
+
   return (
-    <div>
-      <label>{children}</label>
-      <br />
-      <input type={type} id={id} />
+    <div className="flex flex-col gap-2 insaiden-nav p-4">
+      <label className="self-start	">{label}: </label>
+      <input
+        type={type}
+        id={id}
+        onChange={handleChange}
+        placeholder={PL}
+        className={"text-green-800	self-end font-light	px-2"}
+      />
     </div>
   );
-}
+};
 
 export default InputPanel;

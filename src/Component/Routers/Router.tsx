@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import NavigationContext from "./NavBar/NavigationContext";
+import NavigationContext from "../NavBar/NavigationContext";
 
 interface RouterProps {
   path: string;

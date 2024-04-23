@@ -3,18 +3,30 @@ import InputPanel from "../Panel/InputPanel";
 const RentForm: React.FC = () => {
   return (
     <React.Fragment>
-      <InputPanel id="max-rahn" type="number">
-        max-rahn
-      </InputPanel>
-      <InputPanel id="min-ejare" type="number">
-        min-ejare
-      </InputPanel>
-      <InputPanel id="min-rahn" type="number">
-        min-rahn
-      </InputPanel>
-      <InputPanel id="max-ejare" type="number">
-        max-ejare
-      </InputPanel>
+      <InputPanel
+        PL={"enter max Mortgage"}
+        id="maxRahn"
+        type="number"
+        label="maxMortgage"
+      />
+      <InputPanel
+        PL={"enter min Rent"}
+        id="minEjare"
+        type="number"
+        label="minRent"
+      />
+      <InputPanel
+        PL={"enter min Mortgage"}
+        id="minRahn"
+        type="number"
+        label="minMortgage"
+      />
+      <InputPanel
+        PL={"enter max Rent"}
+        id="maxEjare"
+        type="number"
+        label="maxRent"
+      />
     </React.Fragment>
   );
 };

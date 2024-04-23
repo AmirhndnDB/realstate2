@@ -1,35 +1,38 @@
 import React from "react";
 import NavBar from "./Component/NavBar/NavBar";
 import Main from "./Component/Pages/Min";
-import Router from "./Component/Router";
+import Router from "./Component/Routers/Router";
 import AvalableFile from "./Component/Pages/AvalableFile";
 import RegesterationFile from "./Component/Pages/RegesterationFile";
 import FilePage from "./Component/Pages/FilePage";
-import Test from "./test";
-import Stortest from "./Stortest"
+import { useAppSelector } from "./Store/storeIndex";
+import ReviewsSkeleton from "./Component/Skeletonz/ReviewsSkeleton";
 
 const App: React.FC = () => {
+  const inASID = useAppSelector((state) => state.apasel.FilePageID);
+
+  const exID = useAppSelector((state) => state.property.ExFilePageID);
+  const ID = inASID || exID;
   return (
     <>
       <Router path="/">
         <NavBar />
         <Main />
-        <Test/>
-        <Stortest/>
       </Router>
       <Router path="/recomend-file">
-        <AvalableFile />
         <NavBar />
+        <AvalableFile />
       </Router>
       <Router path="/Regesteration-File">
-        <RegesterationFile />
         <NavBar />
+        <RegesterationFile />
       </Router>
-      <Router path="/recomend-file/filePage">
+      <Router path={`/recomend-file/filePage${ID}`}>
         <FilePage />
       </Router>
-
-      
+      <Router path={`/Test`}>
+        <ReviewsSkeleton />
+      </Router>
     </>
   );
 };

@@ -1,124 +1,39 @@
+import { useAppSelector } from "../../Store/storeIndex";
+import ExSecFiles from "../Sections/ExSecFiles";
+import InSecFile from "../Sections/InSecFile";
 import Footer from "../Sections/Footer";
-import Accordion from "../Panel/Accordion";
-import { LiaBedSolid } from "react-icons/lia";
-import { HiOutlineDocumentCheck } from "react-icons/hi2";
-import { TbBuildingCommunity } from "react-icons/tb";
-import { IoCallOutline } from "react-icons/io5";
-import { BiArea } from "react-icons/bi";
-import { GiPositionMarker } from "react-icons/gi";
-import { GoHistory } from "react-icons/go";
-import { CiLight } from "react-icons/ci";
-import { SiConvertio } from "react-icons/si";
-import {
-  MdOutlinePriceChange,
-  MdOutlinePriceCheck,
-  MdOutlineWarehouse,
-  MdBalcony,
-} from "react-icons/md";
-
-import {
-  PiCaretCircleLeftLight,
-  PiElevator,
-  PiCaretCircleRightLight,
-  PiCarProfile,
-  PiBathtub,
-} from "react-icons/pi";
-
 const FilePage: React.FC = () => {
-  return (
-    <section className="">
-      <div className="File-page-sec flex justify-between items-center">
-        <PiCaretCircleLeftLight className="w-12 text-white  h-12 z-50 p-file" />
-        <PiCaretCircleRightLight className="w-12 text-white  h-12 z-50 p-file" />
-      </div>
-      <div className="p-6  text-white flex flex-col gap-4">
-        <h2 className="text-3xl font-sans font-extralight	italic">
-          123 Meter Hous
-        </h2>
-        <Accordion title="descrption">
-          <p>
-            this hous is a vila in sadat st and 132 meterthis hous is a vila in
-            sadat st and 132 meterthis hous is a vila in sadat st and 132
-            meterthis hous is a vila in sadat st and 132 meterthis hous is a
-            vila in sadat st and 132 meterthis hous is a vila in sadat st and
-            132 meterthis hous is a vila in sadat st and 132 meterthis hous is a
-            vila in sadat st and 132 meterthis hous is a vila in sadat st and
-            132 meterthis hous is a vila in sadat st and 132 meterthis hous is a
-            vila in sadat st and 132 meter
-          </p>
-        </Accordion>
-        <div className="grid grid-cols-2 gap-4">
-          <div>
-            <BiArea />
-            <label>housArea</label>
-          </div>
-          <div>
-            <LiaBedSolid />
-            <label>room</label>
-          </div>
-          <div>
-            <GoHistory />
-            <label>age</label>
-          </div>
-          <div>
-            <MdOutlinePriceChange />
-            <label>Price</label>
-          </div>
-          <div>
-            <TbBuildingCommunity />
-            <label> floor X units</label>
-          </div>
-          <div>
-            <PiElevator />
-            <label>Elevator</label>
-          </div>
-          <div>
-            <MdOutlineWarehouse />
-            <label>basement</label>
-          </div>
-          <div>
-            <PiCarProfile />
-            <label>Parking</label>
-          </div>
-          <div>
-            <MdBalcony />
-            <label>balcony</label>
-          </div>
-          <div>
-            <CiLight />
-            <label>Light State</label>
-          </div>
-          <div>
-            <PiBathtub />
-            <label>bathroom</label>
-          </div>
-          <div>
-            <HiOutlineDocumentCheck />
-            <label>document</label>
-          </div>
-
-          <div>
-            <GiPositionMarker />
-            <label>address</label>
-          </div>
-
-          <div>
-            <MdOutlinePriceCheck />
-            <label> ejare</label>
-          </div>
-          <div>
-            <SiConvertio />
-            <label>Convertionable</label>
-          </div>
-        </div>
-        <button className="call-btn">
-          <IoCallOutline />
-          <h5>call</h5>
-        </button>
-      </div>
-
-      <Footer />
-    </section>
-  );
+  // General
+  const ID: any = useAppSelector((state) => state.apasel.FilePageID);
+  // General for  mach cart clicked and return that clicked cart
+  const fileData: any = useAppSelector((state) => {
+    if (state.apasel.FilePageID) {
+      return (
+        state.apasel.apaseldata?.find((item) => item.id === ID) ||
+        state.aparent.aparentdata?.find((item) => item.id === ID) ||
+        state.ofrent.ofrentdata?.find((item) => item.id === ID) ||
+        state.ofsale.ofsaledata?.find((item) => item.id === ID) ||
+        state.property.propertydata?.data.id === ID
+      );
+    } else return null;
+  });
+  //
+  // General
+  if (fileData === true) {
+    return (
+      <main className="text-slate-100	">
+        <ExSecFiles />
+        <Footer />
+      </main>
+    );
+  } else {
+    return (
+      <main className="text-slate-100	">
+        <InSecFile FileData={fileData} />
+        <Footer />
+      </main>
+    );
+  }
+  //
 };
 export default FilePage;

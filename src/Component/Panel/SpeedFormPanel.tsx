@@ -1,43 +1,89 @@
+import useSpeedFormValues from "../../hooks/useSpeadFormInput";
+import { searchThunk } from "../../Store/thunk/fSearchProp";
+import { useAppDispatc } from "../../Store/storeIndex";
+import { setResulte } from "../../Store/Slice/searchSlice";
+
 const SpeedFormPanel: React.FC = () => {
+  const dispatch = useAppDispatc();
+  const {
+    roomNumMin,
+    roomNumMax,
+    bathNum,
+    minBudget,
+    maxBudget,
+    handleRoomNumMinChange,
+    handleRoomNumMaxChange,
+    handleBathNumChange,
+    handleMinBudgetChange,
+    handleMaxBudgetChange,
+    getFormData,
+  } = useSpeedFormValues();
+
+  const handleSubmit = (e: any) => {
+    e.preventDefault();
+    const formData = getFormData();
+    console.log(formData);
+    dispatch(searchThunk(formData));
+    dispatch(setResulte());
+  };
   return (
-    <form className="flex flex-col gap-2">
-      <nav className="insaiden-nav flex justify-center gap-9 bg-slate-400 p-2">
-        <p className="bg-white w-16 text-center">Buy</p>
-        <p className="bg-white w-16 text-center">Rent</p>
+    <form
+      className="flex flex-col gap-2 Fast-Search p-1"
+      onSubmit={handleSubmit}
+    >
+      <nav className="insaiden-nav flex justify-center gap-9  p-2">
+        <p className=" w-fit text-center">Rent- Maskoni</p>
       </nav>
-      <nav className="insaiden-nav flex justify-between bg-slate-400 p-2">
-        <p className="bg-white w-16 text-center">All</p>
-        <p className="bg-white w-16 text-center">Edary</p>
-        <p className="bg-white w-16 text-center">Maskoni</p>
-      </nav>
-      <nav className="insaiden-nav flex flex-col gap-2 bg-slate-400 justify-between p-2 text-xs h-36">
-        <p className="justify-self-center self-center">how meter</p>
+      <nav className="insaiden-nav flex flex-col gap-2  justify-between p-2 text-sm ">
+        <p className="justify-self-center self-start">room numb</p>
         <div className="grid grid-cols-2 gap-1">
-          <p className="bg-white text-center">20m-50m</p>
-          <p className="bg-white text-center">51m-80m</p>
-          <p className="bg-white text-center">81m-110m</p>
-          <p className="bg-white text-center">111m-140m</p>
-          <p className="bg-white text-center">141m-170m</p>
-          <p className="bg-white text-center">171m-220m</p>
-          <p className="bg-white text-center">221m-400m</p>
-          <p className="bg-white text-center">400m-1km</p>
-          <p className="bg-white text-center">1km-5km</p>
-          <p className="bg-white text-center">5km-10km</p>
+          <input
+            type={"number"}
+            placeholder="min-romm"
+            className="bg-slate-100 px-2"
+            value={roomNumMin}
+            onChange={handleRoomNumMinChange}
+          />
+          <input
+            type={"number"}
+            placeholder="max-room"
+            className="bg-slate-100 px-2"
+            value={roomNumMax}
+            onChange={handleRoomNumMaxChange}
+          />
         </div>
       </nav>
-      <nav className="insaiden-nav flex justify-between bg-slate-400 p-2">
-        <input type="number" className="w-12" />
-        <p>max old</p>
+      <nav className="insaiden-nav flex justify-between  p-2 text-sm">
+        <p> bath numb</p>
+        <input
+          placeholder="min-bath"
+          type="number"
+          className="w-28 bg-slate-100 px-2"
+          value={bathNum}
+          onChange={handleBathNumChange}
+        />
       </nav>
-      <nav className="insaiden-nav flex justify-between bg-slate-400 p-2">
-        <input type="number" className="w-28" />
+      <nav className="insaiden-nav flex justify-between  p-2 text-sm">
+        <p>min budget</p>
+        <input
+          placeholder="min budget"
+          type="number"
+          className="w-28 bg-slate-100 px-2"
+          value={minBudget}
+          onChange={handleMinBudgetChange}
+        />
+      </nav>
+      <nav className="insaiden-nav flex justify-between  p-2 text-sm">
         <p>max budget</p>
+        <input
+          placeholder="max-budget"
+          type="number"
+          className="w-28 bg-slate-100 px-2"
+          value={maxBudget}
+          onChange={handleMaxBudgetChange}
+        />
       </nav>
-      <nav className="insaiden-nav flex justify-between bg-slate-400 p-2">
-        <input type="number" className="w-28" />
-        <p>max budget</p>
-      </nav>
-      <button className="start-btn"> search</button>
+      <button className="BTN"> search</button>
     </form>
   );
 };

@@ -10,8 +10,8 @@ const HousForm: React.FC = () => {
   ];
   return (
     <>
-      <OptionPanel name="Sun" id="Sun" myArray={SunArray}>
-        Sun
+      <OptionPanel name="sunState" id="Sun" myArray={SunArray}>
+        sunState
       </OptionPanel>
     </>
   );

@@ -23,7 +23,9 @@ const Accordion: React.FC<AccordionProps> = ({ title, children }) => {
           {isExpanded ? "➖" : "➕"}
         </div>
       </div>
-      {isExpanded && <div className="accordion-content">{children}</div>}
+      {isExpanded && (
+        <div className="accordion-content text-sm	font-thin	">{children}</div>
+      )}
     </div>
   );
 };

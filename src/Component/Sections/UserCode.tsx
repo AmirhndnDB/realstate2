@@ -14,7 +14,7 @@ const UserCode: React.FC = () => {
 
   const actionBar = (
     <div>
-      <button className="btn" onClick={handleClose}>
+      <button className="BTN" onClick={handleClose}>
         OK
       </button>
     </div>
@@ -22,7 +22,7 @@ const UserCode: React.FC = () => {
 
   const modal = (
     <Modal onClose={handleClose} actionBar={actionBar}>
-      <p>
+      <p className="text-gray-600	">
         if you want a code cal with tis number
         <a href="tel:+989124772282">989124772282</a>
       </p>
@@ -30,13 +30,20 @@ const UserCode: React.FC = () => {
   );
 
   return (
-    <section className="User-code" id="user-code">
-      <h3>get user code</h3>
-      <div className="relative">
-        <button className="btn" onClick={handleClick}>
+    <section
+      className="User-code flex flex-col py-16 px-8 h-fit items-center gap-4	"
+      id="user-code"
+    >
+      <h3 className="text-3xl italic font-thin">get user code</h3>
+      <p className="text-sm font-thin">
+        if yuo want a submit yuor File you must get user code for geting user
+        code click the button and go through the mentined steps
+      </p>
+      <div>
+        {showModal && modal}
+        <button className="BTN" onClick={handleClick}>
           get
         </button>
-        {showModal && modal}
       </div>
     </section>
   );

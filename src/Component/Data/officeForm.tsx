@@ -6,14 +6,6 @@ import CheckboxPanel from "../Panel/CheckboxPanel";
 const OfficeForm: React.FC = () => {
   const taradodArray: string[] = ["very", "normal", "litle", "none"];
   const tabloArray: string[] = ["yes", "no", "mojaz-mashaqel"];
-  const vahedAtrafJob: string[] = [
-    "amlak",
-    "salon",
-    "shercat",
-    "daftar-kar",
-    "doktor",
-    "daanesh-bonian",
-  ];
   const mojazJobArray: string[] = [
     "amlak",
     "salon",
@@ -25,14 +17,16 @@ const OfficeForm: React.FC = () => {
 
   return (
     <>
-      <CheckboxPanel myArray={mojazJobArray}>mashaqel mojaz</CheckboxPanel>
-      <CheckboxPanel myArray={vahedAtrafJob}>مشاغل بقیه واحد ها</CheckboxPanel>
-      <OptionPanel id="taradod" name="taradod-mojaz" myArray={taradodArray}>
-        taradod mojaz
+      <CheckboxPanel myArray={mojazJobArray}>mashaqelMojaz</CheckboxPanel>
+      <OptionPanel id="taradod" name="taradodMojaz" myArray={taradodArray}>
+        taradodMojaz
       </OptionPanel>
-      <InputPanel type="number" id="tedadPersenel">
-        tedad Persenel mojaz
-      </InputPanel>
+      <InputPanel
+        PL=""
+        type="number"
+        id="tedadPersenel"
+        label="tedadPersenelMojaz"
+      ></InputPanel>
       <OptionPanel id="tablokhor" name="tablokhor" myArray={tabloArray}>
         tablokhor
       </OptionPanel>

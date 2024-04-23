@@ -5,57 +5,98 @@ import OptionPanel from "../Panel/OptionPanel";
 const GeneralForm: React.FC = () => {
   const sanadArray: string[] = ["maskony", "edary", "tejary", "nadarad"];
   const vaziatArray: string[] = ["por", "khali"];
+
   return (
-    <React.Fragment>
-      <InputPanel id="name" type="text">
-        malek
-      </InputPanel>
-      <InputPanel id="malek-number" type="tel">
-        number
-      </InputPanel>
-      <InputPanel id="addres" type="text">
-        addres
-      </InputPanel>
-      <InputPanel id="meteraj" type="number">
-        meteraj
-      </InputPanel>
-      <InputPanel id="room-n" type="number">
-        room-Numb
-      </InputPanel>
-      <InputPanel type="number" id="parking">
-        parking
-      </InputPanel>
-      <InputPanel type="number" id="assansor">
-        asansor
-      </InputPanel>
-      <InputPanel type="number" id="anbar">
-        anbar
-      </InputPanel>
-      <InputPanel type="number" id="balkon">
-        balkon
-      </InputPanel>
-      <InputPanel type="number" id="numb-ofTabaqat">
-        numb-ofTabaqat
-      </InputPanel>
-      <InputPanel type="number" id="N-vahed-tabaqe">
-        N-vahed-tabaqe
-      </InputPanel>
-      <InputPanel type="number" id="n-tabaqe">
-        n-tabaqe
-      </InputPanel>
-      <InputPanel type="text" id="sharayet-bazdid">
-        sharayet-bazdid
-      </InputPanel>
-      <OptionPanel name="vaziat" id="vaziat" myArray={vaziatArray}>
-        vaziat
+    <>
+      <InputPanel PL={"enter your name"} id="name" type="text" label="owner" />
+      <InputPanel
+        PL={"enter your Phone"}
+        id="malek-number"
+        type="tel"
+        label="callNumber"
+      />
+      <InputPanel PL={"enter nabor"} id="nabor" type="text" label="nabor" />
+      <InputPanel PL={"enter addres"} id="addres" type="text" label="adress" />
+      <InputPanel PL={"enter Area"} id="meteraj" type="number" label="area" />
+      <InputPanel
+        PL={"enter rooms numb"}
+        id="room-n"
+        type="number"
+        label="roomNumb"
+      />
+      <InputPanel
+        PL={"enter baths numb"}
+        id="bath-n"
+        type="number"
+        label="bathNumb"
+      />
+      <InputPanel
+        PL={"enter Parking numb"}
+        type="number"
+        id="parking"
+        label="parking"
+      />
+      <InputPanel
+        PL={"enter elev numb"}
+        type="number"
+        id="elevator"
+        label="elevator"
+      />
+      <InputPanel
+        PL={"enter basement area"}
+        type="number"
+        id="anbar"
+        label="anbary"
+      />
+      <InputPanel
+        PL={"enter balkony area"}
+        type="number"
+        id="balkon"
+        label="balkony"
+      />
+      <InputPanel
+        PL={"enter numb of Floors"}
+        type="number"
+        id="numb-ofTabaqat"
+        label="numbOfFloors"
+      />
+      <InputPanel
+        PL={"enter numb unit in floor "}
+        type="number"
+        id="N-vahed-tabaqe"
+        label="numbUnitFloor"
+      />
+      <InputPanel
+        PL={"enter numb your floor"}
+        type="number"
+        id="n-tabaqe"
+        label="numbOfFloor"
+      />
+      <InputPanel
+        PL={"enter vist condition"}
+        type="text"
+        id="sharayet-bazdid"
+        label="termOfVisits"
+      />
+      <OptionPanel name="dischargeStatus" id="vaziat" myArray={vaziatArray}>
+        dischargeStatus
       </OptionPanel>
-      <InputPanel type="date" id="tarikh-Takhlie">
-        tarikh Takhlie
-      </InputPanel>
-      <OptionPanel name="sanad" id="sanad" myArray={sanadArray}>
-        sanad
+      <InputPanel
+        PL={"enter Date discharge"}
+        type="date"
+        id="tarikh-Takhlie"
+        label="dateDischarge"
+      />
+      <OptionPanel name="documentType" id="sanad" myArray={sanadArray}>
+        documentType
       </OptionPanel>
-    </React.Fragment>
+      <InputPanel
+        PL={"enter your description"}
+        type="text"
+        id="description"
+        label="description"
+      />
+    </>
   );
 };
 export default GeneralForm;
