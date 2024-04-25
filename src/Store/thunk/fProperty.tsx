@@ -13,7 +13,7 @@ export const propertyThunk = createAsyncThunk(
         "X-RapidAPI-Host": "apartments-com1.p.rapidapi.com",
       },
     };
-    await puse(10000);
+    // await puse(10000);
 
     try {
       const response = await axios.request(options);

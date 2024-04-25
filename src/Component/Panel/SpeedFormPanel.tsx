@@ -83,7 +83,7 @@ const SpeedFormPanel: React.FC = () => {
           onChange={handleMaxBudgetChange}
         />
       </nav>
-      <button className="BTN"> search</button>
+      <button className="BTN rounded"> search</button>
     </form>
   );
 };

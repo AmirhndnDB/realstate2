@@ -15,7 +15,7 @@ export const reviewsThunk = createAsyncThunk(
       },
     };
 
-    await puse(2000);
+    // await puse(2000);
 
     try {
       const response = await axios.request(options);

@@ -9,33 +9,33 @@ const NavBar: React.FC = () => {
     <nav className="nav-bar fixed flex justify-between items-center p-4 rounded-3xl	mt-2 mx-2	">
       <LINK
         activeClassName="bg-white rounded-full p-2"
-        className="w-8	hover:bg-white hover:p-2 hover:rounded-full  h-8 Link "
+        className="w-8	hover:bg-white hover:p-2 hover:rounded-full  h-8 Link flex"
         to="/"
       >
         <IoHome className="iconz" />
       </LINK>
       <LINK
         activeClassName="bg-white rounded-full p-2"
-        className="w-8	hover:bg-white hover:p-2 hover:rounded-full  h-8 Link "
+        className="w-8	hover:bg-white hover:p-2 hover:rounded-full  h-8 Link flex"
         to="/recomend-file"
       >
         <BsFillGrid3X3GapFill className="iconz" />
       </LINK>
       <LINK
         activeClassName="bg-white rounded-full p-2"
-        className="w-8	hover:bg-white hover:p-2 hover:rounded-full  h-8 Link "
+        className="w-8	hover:bg-white hover:p-2 hover:rounded-full  h-8 Link flex"
         to="/Regesteration-File"
       >
         <FaFolderPlus className="iconz" />
       </LINK>
       <a
-        className="w-8	hover:bg-white hover:p-2 hover:rounded-full  h-8 flex items-center justify-center  Link"
+        className="w-8	hover:bg-white hover:p-2 hover:rounded-full  h-8 flex items-center justify-center Link"
         href="#user-code"
       >
         <IoQrCodeSharp className="iconz" />
       </a>
       <a
-        className="w-8	hover:bg-white hover:p-2 hover:rounded-full h-8 flex items-center justify-center  Link"
+        className="w-8	hover:bg-white hover:p-2 hover:rounded-full h-8 flex items-center justify-center Link"
         href="#contact"
       >
         <MdContactPhone className="iconz" />

@@ -18,11 +18,11 @@ const CheckboxPanel: React.FC<CheckboxPanelProps> = ({ myArray, children }) => {
       <h5>{children}:</h5>
       <ul className="grid grid-cols-2	text-sm	font-extralight	">
         {myArray.map((item, index) => (
-          <li key={index}>
+          <li className="flex gap-1 items-center" key={index}>
             <input
               type="checkbox"
               onChange={() => handleCheckboxChange(item)}
-              className={"text-green-800"}
+              className={"text-green-800 self-center"}
             />
             <label>{item}</label>
           </li>

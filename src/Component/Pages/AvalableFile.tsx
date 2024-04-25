@@ -14,6 +14,8 @@ import { setDefult } from "../../Store/Slice/searchSlice";
 import { fetchApartmentRentFiles } from "../../Store/thunk/fRentApartment";
 import { fetchOfficeRentFiles } from "../../Store/thunk/fOfficeRent";
 import { fetchOfficeSaleFiles } from "../../Store/thunk/fOfficeSale";
+import UserCode from "../Sections/UserCode";
+
 
 const AvalableFile: React.FC = () => {
   const dispatch = useAppDispatc();
@@ -34,6 +36,7 @@ const AvalableFile: React.FC = () => {
     return (
       <main className="mt-32 p-0 text-slate-100">
         <RecomendFile />
+        <UserCode/>
         <Footer />
       </main>
     );
@@ -41,6 +44,7 @@ const AvalableFile: React.FC = () => {
     return (
       <main className="mt-32 p-0 text-slate-100">
         <SearchResult />
+        <UserCode/>
         <Footer />
       </main>
     );

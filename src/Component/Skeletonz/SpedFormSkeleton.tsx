@@ -35,7 +35,7 @@ const SpedFormSkeleton: React.FC = () => {
           <Skeleton />
         </span>
       </nav>
-      <div className="BTN cursor-pointer	"> search</div>
+      <div className="BTN cursor-pointer rounded	"> search</div>
     </form>
   );
 };

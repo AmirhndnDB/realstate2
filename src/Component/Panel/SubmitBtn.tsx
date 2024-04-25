@@ -53,7 +53,7 @@ const SubmitBtn: React.FC = () => {
         />
       </div>
       <div
-        className="BTN bgShade2 AccentColor Submit-btn cursor-pointer	"
+        className="BTN bgShade2 AccentColor Submit-btn cursor-pointer rounded	"
         onClick={handleClick}
       >
         Add Your File

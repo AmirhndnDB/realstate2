@@ -14,7 +14,7 @@ const StartApp: React.FC = () => {
             the bigest realEstate in area
           </h4>
         </div>
-        <LINK activeClassName="" className="BTN" to="/recomend-file">
+        <LINK activeClassName="" className="BTN rounded" to="/recomend-file">
           Start Now &#8594;
         </LINK>
       </div>

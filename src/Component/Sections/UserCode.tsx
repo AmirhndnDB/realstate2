@@ -41,7 +41,7 @@ const UserCode: React.FC = () => {
       </p>
       <div>
         {showModal && modal}
-        <button className="BTN" onClick={handleClick}>
+        <button className="BTN rounded" onClick={handleClick}>
           get
         </button>
       </div>

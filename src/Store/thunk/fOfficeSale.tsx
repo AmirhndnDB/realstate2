@@ -8,7 +8,7 @@ export const fetchOfficeSaleFiles = createAsyncThunk(
       method: "GET",
       url: "http://localhost:3005/OficSaleFiles",
     };
-    await puse(1000);
+    // await puse(1000);
 
     try {
       const response = await axios.request(options);

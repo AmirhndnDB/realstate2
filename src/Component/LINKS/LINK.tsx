@@ -12,7 +12,7 @@ interface LinkProps {
 function LINK({ to, children, className, activeClassName }: LinkProps) {
   const { navigate, currentPath } = useNavigation() || { navigate: () => {} };
   const classes = classNames(
-    " flex items-center justify-center",
+    "  items-center justify-center",
     className,
     currentPath === to && activeClassName
   );

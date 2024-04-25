@@ -87,7 +87,18 @@ Difult:  1 / 1.5 / 2 / 5 ;
 body {
   background-color: #56bf8a;
 }
-
+.AccentColor {
+  color: #e0fe9c;
+}
+.bgShade2 {
+  background-color: #45996e;
+}
+.bg-Tint1 {
+  background-color: #89d2ad;
+}
+.bg-Shade3 {
+  background-color: #1a3929;
+}
 /* ***************** */
 /* nav-bar */
 /* **************** */
@@ -101,18 +112,7 @@ body {
   background-color: aliceblue;
 }
 
-.AccentColor {
-  color: #e0fe9c;
-}
-.bgShade2 {
-  background-color: #45996e;
-}
-.bg-Tint1 {
-  background-color: #89d2ad;
-}
-.bg-Shade3 {
-  background-color: #1a3929;
-}
+
 
 Link:hover {
   transition: all 1s;
@@ -120,6 +120,7 @@ Link:hover {
 .Link {
   transition: all 1s;
 }
+
 
 /* *************** */
 /* Hom page */
